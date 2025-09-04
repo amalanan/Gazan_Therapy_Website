@@ -1,2 +1,2 @@
-# Gazan_Therapy_Website
+# Gazan Therapy Website
 Gazan Therapy Website is a software engineering project developed to provide online therapy and mental health support for individuals in Gaza. The platform includes features such as user registration, appointment booking, therapist profiles, secure communication, and educational resources. It is built collaboratively by our team of 8 developers as part of a software engineering course project.
