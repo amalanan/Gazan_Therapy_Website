@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب | Gazan Therapy</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-light-green font-tajawal">
+
+    <header id="mainHeader" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center bg-white shadow-md rounded-full mt-4">
+            <div class="flex items-center space-x-reverse space-x-4">
+                <a href="index.html" class="flex items-center text-2xl font-bold brand-text">
+                    Gazan Therapy
+                    <i class="fas fa-heart text-sm mr-2 brand-icon"></i>
+                </a>
+            </div>
+            <div class="hidden md:flex flex-1 justify-center space-x-reverse space-x-6">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="share_story.html" class="nav-link">شارك قصتك</a>
+                <a href="stories.html" class="nav-link">قصص المجتمع</a>
+                <a href="consult.html" class="nav-link">استشر معالج</a>
+                <a href="daily_tips.html" class="nav-link">نصائح يومية</a>
+                <a href="about_us.html" class="nav-link">من نحن</a>
+            </div>
+            <div class="flex items-center space-x-reverse space-x-4">
+                <a href="login.html" class="login-btn hidden md:block active">تسجيل الدخول</a>
+                <button id="mobileMenuToggle" class="text-gray-700 focus:outline-none md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMobileMenu" class="close-btn">&times;</button>
+        <div class="flex flex-col items-center mt-8">
+            <a href="index.html" class="flex items-center text-2xl font-bold brand-text">
+                Gazan Therapy
+                <i class="fas fa-heart text-sm mr-2 brand-icon"></i>
+            </a>
+            <ul class="flex flex-col items-start w-full mt-8">
+                <li><a href="index.html" class="nav-link text-xl">الرئيسية</a></li>
+                <li><a href="share_story.html" class="nav-link text-xl">شارك قصتك</a></li>
+                <li><a href="stories.html" class="nav-link text-xl">قصص المجتمع</a></li>
+                <li><a href="consult.html" class="nav-link text-xl">استشر معالج</a></li>
+                <li><a href="daily_tips.html" class="nav-link text-xl">نصائح يومية</a></li>
+                <li><a href="about_us.html" class="nav-link text-xl">من نحن</a></li>
+            </ul>
+            <a href="login.html" class="login-btn w-full mt-8 text-center active">تسجيل الدخول</a>
+        </div>
+    </div>
+    <div id="mobileMenuOverlay" class="overlay"></div>
+
+    <main class="py-10 pt-32 lg:pt-40">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold text-main-heading-color mb-4">انضم إلينا</h1>
+                <p class="text-base md:text-lg text-hero-secondary-text-color max-w-2xl mx-auto">
+                    أنشئ حسابك الجديد
+                </p>
+            </div>
+
+            <div class="max-w-md mx-auto p-6 md:p-8 bg-white shadow-lg rounded-2xl">
+                <div class="flex rounded-full mb-6 p-1 bg-gray-100">
+                    <a href="login.html" class="flex-1 text-center py-2 px-4 rounded-full font-semibold transition-colors duration-200 text-gray-500 hover:text-blue-500">تسجيل الدخول</a>
+                    <a href="signup.html" class="flex-1 text-center py-2 px-4 rounded-full font-semibold transition-colors duration-200 bg-white shadow-md text-blue-500">إنشاء حساب</a>
+                </div>
+                
+                <form action="#" method="POST">
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-main-heading-color mb-2">نوع المستخدم</label>
+                        <div class="flex items-center space-x-4 space-x-reverse">
+                            <label for="userTypeNormal" class="flex-1 flex flex-col items-center justify-center p-4 rounded-lg cursor-pointer transition-colors duration-200 border-2" id="labelNormalUser">
+                                <i class="fas fa-user-circle text-2xl mb-2"></i>
+                                <span class="font-semibold">مستخدم عادي</span>
+                                <input type="radio" id="userTypeNormal" name="userType" value="normal" class="hidden" checked>
+                            </label>
+                            <label for="userTypeTherapist" class="flex-1 flex flex-col items-center justify-center p-4 rounded-lg cursor-pointer transition-colors duration-200 border-2" id="labelTherapist">
+                                <i class="fas fa-user-md text-2xl mb-2"></i>
+                                <span class="font-semibold">معالج نفسي</span>
+                                <input type="radio" id="userTypeTherapist" name="userType" value="therapist" class="hidden">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 bg-blue-50 p-4 rounded-lg flex items-center">
+                        <input type="checkbox" id="anonymous" class="form-checkbox h-5 w-5 ml-3 rounded-md">
+                        <label for="anonymous" class="text-sm md:text-base font-medium text-main-heading-color cursor-pointer">التسجيل المجهول (الخصوصية)</label>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="fullName" class="block text-sm font-medium text-main-heading-color mb-2">الاسم الكامل</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="أدخل اسمك الكامل" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200" required>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-main-heading-color mb-2">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200" required>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="password" class="block text-sm font-medium text-main-heading-color mb-2">كلمة المرور</label>
+                        <div class="relative">
+                            <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200" required>
+                            <button type="button" class="absolute inset-y-0 left-0 flex items-center pr-3 text-gray-400" id="togglePasswordVisibility">
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="confirmPassword" class="block text-sm font-medium text-main-heading-color mb-2">تأكيد كلمة المرور</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="تأكيد كلمة المرور" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200" required>
+                    </div>
+
+                    <div id="therapistFields" class="hidden">
+                        <div class="mb-6">
+                            <label for="licenseNumber" class="block text-sm font-medium text-main-heading-color mb-2">رقم الترخيص المهني</label>
+                            <input type="text" id="licenseNumber" name="licenseNumber" placeholder="أدخل رقم الترخيص" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200">
+                        </div>
+                        <div class="mb-6">
+                            <label for="specialization" class="block text-sm font-medium text-main-heading-color mb-2">التخصص</label>
+                            <select id="specialization" name="specialization" class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white appearance-none focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200">
+                                <option value="">اختر التخصص</option>
+                                <option value="clinical_psychologist">أخصائي نفسي سريري</option>
+                                <option value="counseling_psychologist">أخصائي نفسي إرشادي</option>
+                                <option value="psychiatrist">طبيب نفسي</option>
+                                <option value="family_therapist">معالج أسري</option>
+                                <option value="child_psychologist">أخصائي نفسي أطفال</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-center text-gray-600 mb-6">
+                        بإنشاء حساب، فإنك توافق على <a href="#" class="text-blue-500 hover:underline">شروط الاستخدام</a> و<a href="#" class="text-blue-500 hover:underline">سياسة الخصوصية</a>.
+                    </p>
+
+                    <div class="flex flex-col md:flex-row-reverse md:justify-start space-y-4 md:space-y-0 md:space-x-4 space-x-reverse">
+                        <button type="submit" class="w-full md:w-auto px-6 py-3 rounded-full text-white font-semibold main-gradient-btn hover:main-gradient-btn-hover">
+                            <span>إنشاء حساب</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+  <footer class="footer-section py-12" style="background-color: #032145;">
+    <div class="container mx-auto px-4 py-8 md:py-12 text-center">
+        <div class="flex flex-col md:flex-row md:justify-around md:items-start gap-8">
+            <div class="flex flex-col items-center mb-6 md:mb-0">
+                <div class="flex items-center text-white text-3xl font-bold mb-4">
+                    <i class="fas fa-heart text-base ml-2" style="color: var(--header-heart-icon-color);"></i>
+                    سكينة النفس
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4 max-w-sm">منصة شاملة للرعاية النفسية والدعم المجتمعي، نؤمن بأهمية الصحة النفسية ونسعى لتوفير بيئة آمنة وداعمة للجميع.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center justify-center"><i class="fas fa-phone-alt ml-2 text-gray-400"></i><span class="text-gray-400">966 50 123 4567+</span></li>
+                    <li class="flex items-center justify-center"><i class="fas fa-envelope ml-2 text-gray-400"></i><span class="text-gray-400">info@sakinat-nafs.com</span></li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center mb-6 md:mb-0">
+                <h5 class="text-xl font-semibold mb-4 text-white">روابط سريعة</h5>
+                <ul class="space-y-2">
+                    <li><a href="share_story.html" class="text-gray-400 hover:text-white transition-colors duration-300">شارك قصتك</a></li>
+                    <li><a href="stories.html" class="text-gray-400 hover:text-white transition-colors duration-300">قصص المجتمع</a></li>
+                    <li><a href="consult.html" class="text-gray-400 hover:text-white transition-colors duration-300">استشر معالج</a></li>
+                    <li><a href="daily_tips.html" class="text-gray-400 hover:text-white transition-colors duration-300">نصائح يومية</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center mb-6 md:mb-0">
+                <h5 class="text-xl font-semibold mb-4 text-white">الدعم</h5>
+                <ul class="space-y-2">
+                    <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors duration-300">من نحن</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">سياسة الخصوصية</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">شروط الاستخدام</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">تواصل معنا</a></li>
+                </ul>
+            </div>
+          
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6">
+            <p class="text-gray-500 text-sm text-center">&copy; 2025 Gazan Therapy. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userTypeNormal = document.getElementById('userTypeNormal');
+            const userTypeTherapist = document.getElementById('userTypeTherapist');
+            const labelNormalUser = document.getElementById('labelNormalUser');
+            const labelTherapist = document.getElementById('labelTherapist');
+            const therapistFields = document.getElementById('therapistFields');
+            const togglePasswordVisibility = document.getElementById('togglePasswordVisibility');
+            const passwordField = document.getElementById('password');
+
+            function updateTherapistSection(isTherapist) {
+                if (isTherapist) {
+                    therapistFields.classList.remove('hidden');
+                    // Apply active styles to Therapist label
+                    labelTherapist.classList.add('border-blue-500');
+                    labelTherapist.classList.remove('border-transparent');
+                    labelTherapist.querySelector('i').classList.add('text-blue-500');
+                    labelTherapist.querySelector('i').classList.remove('text-gray-500');
+                    labelTherapist.querySelector('span').classList.add('text-blue-500');
+                    labelTherapist.querySelector('span').classList.remove('text-gray-500');
+
+                    // Remove active styles from Normal User label
+                    labelNormalUser.classList.remove('border-blue-500');
+                    labelNormalUser.classList.add('border-transparent');
+                    labelNormalUser.querySelector('i').classList.remove('text-blue-500');
+                    labelNormalUser.querySelector('i').classList.add('text-gray-500'); // Ensure it defaults to gray
+                    labelNormalUser.querySelector('span').classList.remove('text-blue-500');
+                    labelNormalUser.querySelector('span').classList.add('text-gray-500'); // Ensure it defaults to gray
+                } else {
+                    therapistFields.classList.add('hidden');
+                    // Apply active styles to Normal User label
+                    labelNormalUser.classList.add('border-blue-500');
+                    labelNormalUser.classList.remove('border-transparent');
+                    labelNormalUser.querySelector('i').classList.add('text-blue-500');
+                    labelNormalUser.querySelector('i').classList.remove('text-gray-500');
+                    labelNormalUser.querySelector('span').classList.add('text-blue-500');
+                    labelNormalUser.querySelector('span').classList.remove('text-gray-500');
+
+                    // Remove active styles from Therapist label
+                    labelTherapist.classList.remove('border-blue-500');
+                    labelTherapist.classList.add('border-transparent');
+                    labelTherapist.querySelector('i').classList.remove('text-blue-500');
+                    labelTherapist.querySelector('i').classList.add('text-gray-500'); // Ensure it defaults to gray
+                    labelTherapist.querySelector('span').classList.remove('text-blue-500');
+                    labelTherapist.querySelector('span').classList.add('text-gray-500'); // Ensure it defaults to gray
+                }
+            }
+            
+            userTypeNormal.addEventListener('change', function() {
+                updateTherapistSection(false);
+            });
+            userTypeTherapist.addEventListener('change', function() {
+                updateTherapistSection(true);
+            });
+            
+            // Initial call to set the correct state based on default checked radio button
+            updateTherapistSection(userTypeTherapist.checked);
+
+            togglePasswordVisibility.addEventListener('click', function() {
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+                this.querySelector('i').classList.toggle('fa-eye');
+                this.querySelector('i').classList.toggle('fa-eye-slash');
+            });
+        });
+    </script>
+</body>
+</html>

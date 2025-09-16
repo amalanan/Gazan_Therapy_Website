@@ -1,0 +1,576 @@
+/*
+  =============================================================
+  ملف التنسيقات الرئيسي (style.css)
+  -------------------------------------------------------------
+  هذا الملف يحتوي على جميع الأنماط (Styles) الخاصة بصفحات الموقع،
+  من الألوان والخطوط وحتى تنسيقات الأزرار والبطاقات.
+  تم ترتيبه في أقسام رئيسية لتسهيل عملية الفهم والتعديل.
+  =============================================================
+*/
+
+/*
+  -------------------------------------------------------------
+  1. خصائص CSS المخصصة (Custom CSS Properties)
+  -------------------------------------------------------------
+  قمت بتعريف متغيرات لجميع الألوان والقياسات الرئيسية هنا.
+  هذا النهج يسهل تعديل مظهر الموقع بالكامل من مكان واحد فقط.
+  مثال: إذا أردت تغيير لون الخلفية، يمكنني ببساطة تعديل 'var(--body-bg-color)'.
+*/
+:root {
+    /* ألوان الخلفية والنصوص العامة */
+    --body-bg-color: #f0f9fc;
+    --main-text-color: #111111; /* تم تغميقه بشكل كبير */
+    --light-text-color: #333333; /* تم تغميقه بشكل كبير */
+    --section-bg-white: #FFFFFF;
+
+    /* تدرج الألوان الرئيسي للعناصر الأساسية (مثل الأزرار والنصوص المميزة) */
+    --main-gradient-start: #00c6a7;
+    --main-gradient-end: #00a2e2;
+    --main-gradient-hover-start: #00a2e2;
+    --main-gradient-hover-end: #00c6a7;
+    --main-gradient-text-color: #FFFFFF;
+
+    /* ألوان الهيدر (شريط التنقل العلوي) */
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --header-scrolled-bg: #FFFFFF;
+    --header-brand-text-color: #000000; /* تم تغميقه */
+    --header-heart-icon-color: var(--main-gradient-end);
+    --header-nav-link-hover: #4AC6BA;
+
+    /* ألوان الفوتر (التذييل) */
+    --footer-bg: #111111; /* تم تغميقه */
+    --footer-text-color: #CBD5E0;
+    --footer-heart-icon-color: var(--header-heart-icon-color);
+    --footer-copyright-container-bg: #111111; /* تم تغميقه */
+
+    /* ألوان أيقونات البطاقات */
+    --icon-light-bg-1: #E0F2FA;
+    --icon-color-1: #3182CE;
+    --icon-light-bg-2: #E0FFF0;
+    --icon-color-2: #48BB78;
+    --icon-light-bg-3: #EBF8FF;
+    --icon-color-3: #63B3ED;
+    --icon-light-bg-4: #FFEFD5;
+    --icon-color-4: #F6AD55;
+    
+    /* ألوان خاصة بصفحة النصائح اليومية (Daily Tips) */
+    --daily-tip-icon-mindfulness: #e0f2fa;
+    --daily-tip-icon-mood-boosting: #fefcbf;
+    --daily-tip-icon-sleep: #fee2e2;
+    --daily-tip-icon-healthy-habits: #d1f7e0;
+    --daily-tip-icon-stress-relief: #e9e2f8;
+    --daily-tip-icon-anxiety: #fde8d9;
+    --daily-tip-color-mindfulness: #3182ce;
+    --daily-tip-color-mood-boosting: #d69e2e;
+    --daily-tip-color-sleep: #e53e3e;
+    --daily-tip-color-healthy-habits: #2f855a;
+    --daily-tip-color-stress-relief: #6b46c1;
+    --daily-tip-color-anxiety: #dd6b20;
+    
+    /* ألوان خاصة أخرى */
+    --star-color: #FBBF24;
+    --testimonial-card-text: #333333;
+}
+
+/*
+  -------------------------------------------------------------
+  2. الأنماط الأساسية والخطوط (Base & Font Styles)
+  -------------------------------------------------------------
+  هذا الجزء يحدد خصائص الخط الأساسية واتجاه الصفحة (RTL) لدعم اللغة العربية.
+*/
+body {
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: var(--body-bg-color);
+    color: var(--light-text-color);
+    scroll-behavior: smooth;
+}
+
+/* تعديلات عامة لـ RTL */
+.space-x-reverse > *:not([hidden]) ~ *:not([hidden]) {
+    --tw-space-x-reverse: 1;
+}
+
+/*
+  -------------------------------------------------------------
+  3. تنسيق النصوص والعناوين (Typography)
+  -------------------------------------------------------------
+  لتطبيق لون موحد على جميع العناوين في الموقع.
+*/
+h1, h2, h3, h4, h5, h6, .text-main-heading-color {
+    color: var(--main-text-color) !important;
+}
+
+/*
+  -------------------------------------------------------------
+  4. الهيدر وشريط التنقل (Header & Navbar)
+  -------------------------------------------------------------
+  الأنماط المسؤولة عن شكل الهيدر وتأثير التمرير عليه.
+*/
+.navbar {
+    background-color: var(--header-bg);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    background-color: var(--header-scrolled-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.brand-text {
+    color: var(--header-brand-text-color);
+}
+
+.brand-icon {
+    color: var(--header-heart-icon-color);
+}
+
+.nav-link {
+    position: relative;
+    color: var(--light-text-color);
+    padding: 0.5rem 0.75rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--header-nav-link-hover);
+}
+
+.nav-link.active {
+    color: var(--header-nav-link-hover);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 70%;
+    height: 2px;
+    background-color: var(--header-nav-link-hover);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:not(.active):hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 30%;
+    height: 2px;
+    background-color: var(--header-nav-link-hover);
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+
+.login-btn {
+    background: linear-gradient(90deg, var(--main-gradient-start), var(--main-gradient-end));
+    color: var(--main-gradient-text-color);
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+}
+.login-btn:hover {
+    background: linear-gradient(90deg, var(--main-gradient-hover-start), var(--main-gradient-hover-end));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/*
+  -------------------------------------------------------------
+  5. القائمة المتنقلة (Mobile Menu)
+  -------------------------------------------------------------
+  أنماط القائمة الجانبية التي تظهر على الأجهزة المحمولة.
+*/
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 1.5rem;
+}
+
+.mobile-menu ul li a {
+    font-size: 1.25rem;
+    color: var(--main-text-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.mobile-menu ul li a:hover,
+.mobile-menu ul li a.active {
+    color: var(--header-nav-link-hover);
+}
+
+.mobile-menu .close-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--main-text-color);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*
+  -------------------------------------------------------------
+  6. الأزرار القابلة لإعادة الاستخدام (Reusable Buttons)
+  -------------------------------------------------------------
+  أنماط الأزرار الرئيسية والثانوية المستخدمة في مختلف الأقسام.
+*/
+.hero-btn-primary, .main-gradient-btn {
+    background: linear-gradient(90deg, var(--main-gradient-start), var(--main-gradient-end));
+    color: var(--main-gradient-text-color);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.hero-btn-primary:hover, .main-gradient-btn:hover {
+    background: linear-gradient(90deg, var(--main-gradient-hover-start), var(--main-gradient-hover-end));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn-outline {
+    background-color: var(--main-gradient-text-color);
+    border: 2px solid var(--main-gradient-end);
+    color: var(--main-gradient-end);
+    transition: all 0.3s ease;
+}
+.hero-btn-outline:hover {
+    background-color: var(--main-gradient-end);
+    color: var(--main-gradient-text-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+.hero-btn-outline:hover i {
+    transform: translateX(-5px);
+}
+
+/*
+  -------------------------------------------------------------
+  7. الأقسام والبطاقات (Sections & Cards)
+  -------------------------------------------------------------
+  أنماط عامة للبطاقات التي تتكرر في أكثر من صفحة.
+*/
+.card, .stat-card, .goal-card, .team-card, .daily-tip-card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 12px;
+}
+.card:hover, .stat-card:hover, .goal-card:hover, .team-card:hover, .daily-tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*
+  -------------------------------------------------------------
+  8. أقسام محددة في الموقع
+  -------------------------------------------------------------
+  تنسيقات خاصة لبعض الأقسام والصفحات.
+*/
+/* قسم البداية (Hero Section) */
+.hero-section {
+    background: linear-gradient(135deg, var(--body-bg-color) 0%, #C8EAEB 100%);
+}
+.hero-section .gradient-text {
+    background: linear-gradient(to right, var(--main-gradient-start), var(--main-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* قسم لماذا نحن والخدمات (Why Us & Services Sections) */
+.why-us-section, .services-section {
+    background-color: var(--section-bg-white);
+}
+.icon-circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* قسم آراء العملاء (Testimonials Section) */
+.testimonial-card {
+    background-color: var(--section-bg-white);
+}
+.rating .fas {
+    color: var(--star-color);
+}
+.testimonial-card .card-text {
+    color: var(--testimonial-card-text);
+}
+
+/* قسم الدعوة لاتخاذ إجراء (CTA Section) */
+.cta-section {
+    background: var(--body-bg-color);
+}
+.cta-btn {
+    background-color: var(--main-gradient-text-color);
+    color: var(--main-gradient-start);
+    border: 2px solid var(--main-gradient-text-color);
+    transition: all 0.3s ease;
+    border-radius: 9999px;
+}
+.cta-btn:hover {
+    background-color: transparent;
+    color: var(--main-gradient-text-color);
+}
+
+/* صفحة من نحن (About Us Page) */
+.mission-card {
+    background: linear-gradient(135deg, #00c6a7, #00a2e2);
+}
+
+/* صفحة اتصل بنا (Contact Us) */
+.contact-btn {
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+.contact-btn:hover {
+    background-color: #cbd5e0;
+}
+.contact-btn.active-contact-btn {
+    background: linear-gradient(90deg, #00c6a7, #00a2e2);
+    color: white;
+}
+
+/* صفحة القصص (Stories Page) */
+.story-card .card-body .author-info {
+    font-weight: 500;
+}
+
+/* صفحة الاستشارات (Consult Page) */
+.consult-card-icon {
+    font-size: 2.5rem;
+}
+
+/* صفحة شارك قصتك (Share Story Page) */
+.form-checkbox {
+    border-radius: 4px;
+    border-color: #CBD5E0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #CBD5E0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.form-checkbox:checked {
+    background-color: #3182CE;
+    border-color: #3182CE;
+}
+
+/* صفحة النصائح اليومية (Daily Tips Page) */
+.daily-tip-card {
+    position: relative;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+}
+.tip-icon-small {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.tip-category-tag {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+.tip-icon-small.mindfulness, .tip-category-tag.mindfulness { background-color: var(--daily-tip-icon-mindfulness); color: var(--daily-tip-color-mindfulness); }
+.tip-icon-small.mood-boosting, .tip-category-tag.mood-boosting { background-color: var(--daily-tip-icon-mood-boosting); color: var(--daily-tip-color-mood-boosting); }
+.tip-icon-small.sleep-improvement, .tip-category-tag.sleep-improvement { background-color: var(--daily-tip-icon-sleep);
+color: var(--daily-tip-color-sleep); }
+.tip-icon-small.healthy-habits, .tip-category-tag.healthy-habits { background-color: var(--daily-tip-icon-healthy-habits); color: var(--daily-tip-color-healthy-habits); }
+.tip-icon-small.stress-relief, .tip-category-tag.stress-relief { background-color: var(--daily-tip-icon-stress-relief); color: var(--daily-tip-color-stress-relief);
+}
+.tip-icon-small.anxiety, .tip-category-tag.anxiety { background-color: var(--daily-tip-icon-anxiety); color: var(--daily-tip-color-anxiety); }
+.try-now-btn {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, #00c6a7, #00a2e2);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.try-now-btn:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+.likes-btn.liked {
+    color: red;
+}
+.weekly-challenge-card {
+    background: linear-gradient(135deg, #7B4397, #DC2430);
+    color: white;
+}
+.day-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
+}
+.day-btn.is-completed {
+    background-color: #fff;
+    color: #00c6a7;
+    border-color: #fff;
+    font-weight: bold;
+}
+
+/*
+  -------------------------------------------------------------
+  9. الفوتر (Footer)
+  -------------------------------------------------------------
+  أنماط الجزء السفلي من الصفحة.
+*/
+.footer-section {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+}
+.footer-section h5, .footer-section a, .footer-section p, .footer-section span {
+    color: #fff !important;
+}
+.footer-section .copyright-container {
+    background-color: var(--footer-copyright-container-bg);
+}
+.developer-logo {
+    opacity: 0.6;
+}
+.like-btn.liked { color: red;
+}
+.search-box {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+}
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+/* نمط جديد لصفحة المحادثة */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 8rem); /* Adjust height to fit between header and footer */
+  padding-bottom: 2rem;
+}
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+.chat-message-bubble {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+  word-wrap: break-word;
+}
+.sent {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-left-radius: 0.5rem;
+}
+.received {
+  background-color: #f1f0f0;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-right-radius: 0.5rem;
+}
+.chat-input-area {
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  background-color: #fff;
+  display: flex;
+  gap: 0.5rem;
+}
+.chat-input {
+  flex: 1;
+  border-radius: 9999px;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1.25rem;
+}
+.chat-send-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 9999px;
+  padding: 0.75rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

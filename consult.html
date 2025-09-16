@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استشر معالج | Gazan Therapy</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-light-green font-tajawal">
+
+    <header id="mainHeader" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center bg-white shadow-md rounded-full mt-4">
+            <div class="flex items-center space-x-reverse space-x-4">
+                <a href="index.html" class="flex items-center text-2xl font-bold brand-text">
+                    Gazan Therapy
+                    <i class="fas fa-heart text-sm mr-2 brand-icon"></i>
+                </a>
+            </div>
+            <div class="hidden md:flex flex-1 justify-center space-x-reverse space-x-6">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="share_story.html" class="nav-link">شارك قصتك</a>
+                <a href="stories.html" class="nav-link">قصص المجتمع</a>
+                <a href="consult.html" class="nav-link active">استشر معالج</a>
+                <a href="daily_tips.html" class="nav-link">نصائح يومية</a>
+                <a href="about_us.html" class="nav-link">من نحن</a>
+            </div>
+            <div class="flex items-center space-x-reverse space-x-4">
+                <a href="login.html" class="login-btn hidden md:block">تسجيل الدخول</a>
+                <button id="mobileMenuToggle" class="text-gray-700 focus:outline-none md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMobileMenu" class="close-btn">&times;</button>
+        <div class="flex flex-col items-center mt-8">
+            <a href="index.html" class="flex items-center text-2xl font-bold brand-text">
+                Gazan Therapy
+                <i class="fas fa-heart text-sm mr-2 brand-icon"></i>
+            </a>
+            <ul class="flex flex-col items-start w-full mt-8">
+                <li><a href="index.html" class="nav-link text-xl">الرئيسية</a></li>
+                <li><a href="share_story.html" class="nav-link text-xl">شارك قصتك</a></li>
+                <li><a href="stories.html" class="nav-link text-xl">قصص المجتمع</a></li>
+                <li><a href="consult.html" class="nav-link text-xl active">استشر معالج</a></li>
+                <li><a href="daily_tips.html" class="nav-link text-xl">نصائح يومية</a></li>
+                <li><a href="about_us.html" class="nav-link text-xl">من نحن</a></li>
+            </ul>
+            <a href="login.html" class="login-btn w-full mt-8 text-center">تسجيل الدخول</a>
+        </div>
+    </div>
+    <div id="mobileMenuOverlay" class="overlay"></div>
+
+    <main class="py-10 pt-32 lg:pt-40">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold text-main-heading-color mb-4">استشر معالج نفسي</h1>
+                <p class="text-base md:text-lg text-hero-secondary-text-color max-w-2xl mx-auto">
+                    تواصل مع أفضل المعالجين النفسيين المعتمدين. احجز جلسة استشارة أو ابدأ محادثة خاصة
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-6 mb-8 max-w-4xl mx-auto">
+                <div class="flex-1 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input 
+                            type="text"
+                            class="w-full pr-10 py-3 text-gray-700 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-100 focus:border-blue-500"
+                            placeholder="ابحث عن معالج أو تخصص..."
+                        >
+                    </div>
+                </div>
+
+                <div class="w-full md:w-64">
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                        <label for="therapistCategory" class="block text-sm font-medium text-gray-700 mb-2">تصنيف التخصصات</label>
+                        <select 
+                            id="therapistCategory" 
+                            class="w-full px-3 py-2 text-gray-700 bg-gray-50 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-100 focus:border-blue-500"
+                        >
+                            <option value="">جميع التخصصات</option>
+                            <option value="clinical">أخصائي نفسي سريري</option>
+                            <option value="counseling">أخصائي نفسي إرشادي</option>
+                            <option value="child">أخصائي نفسي أطفال</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-green-400 relative">
+                    <span class="absolute top-4 left-4 bg-green-400 text-white text-xs font-bold px-3 py-1 rounded-full">متاح</span>
+                    <div class="flex items-center flex-col md:flex-row mb-4">
+                        <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-4xl text-gray-500 mb-4 md:mb-0 md:mr-4">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="text-center md:text-right flex-1">
+                            <h3 class="text-xl font-bold text-main-heading-color" data-therapist-name="د. محمد الأحمد">د. محمد الأحمد</h3>
+                            <p class="text-blue-500 font-medium">الطب النفسي</p>
+                            <div class="flex items-center justify-center md:justify-end text-yellow-500 mt-2">
+                                <i class="fas fa-star text-sm ml-1"></i>
+                                <span class="text-sm text-gray-600 font-medium">(89 تقييم) 4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-end space-x-2 space-x-reverse text-gray-600 mb-4 text-sm">
+                        <span class="flex items-center"><i class="fas fa-calendar-alt ml-1"></i>خبرة 15 سنة</span>
+                        <span class="flex items-center"><i class="fas fa-map-marker-alt ml-1"></i>جدة</span>
+                    </div>
+
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4 text-center md:text-right">طبيب نفسي معتمد مع خبرة واسعة في علاج اضطرابات المزاج والذهان. متخصص في الطب النفسي للبالغين والمراهقين.</p>
+                    
+                    <div class="mb-4">
+                        <span class="text-sm font-semibold text-main-heading-color block mb-2 text-center md:text-right">اللغات:</span>
+                        <div class="flex flex-wrap justify-center md:justify-end gap-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">العربية</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">الإنجليزية</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">الفرنسية</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <a href="chat.html" class="chat-btn flex-1 px-4 py-3 rounded-full font-semibold border-2 border-blue-500 text-blue-500 text-center hover:bg-blue-50 transition-colors duration-200">
+                            <i class="fas fa-comment ml-2"></i>محادثة
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2 text-center">متاح للحجز من ١٤٤٧/٧/٨ هـ</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-green-400 relative">
+                    <span class="absolute top-4 left-4 bg-green-400 text-white text-xs font-bold px-3 py-1 rounded-full">متاح</span>
+                    <div class="flex items-center flex-col md:flex-row mb-4">
+                        <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-4xl text-gray-500 mb-4 md:mb-0 md:mr-4">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="text-center md:text-right flex-1">
+                            <h3 class="text-xl font-bold text-main-heading-color" data-therapist-name="د. أمل الحسن">د. أمل الحسن</h3>
+                            <p class="text-blue-500 font-medium">علم النفس العادي</p>
+                            <div class="flex items-center justify-center md:justify-end text-yellow-500 mt-2">
+                                <i class="fas fa-star text-sm ml-1"></i>
+                                <span class="text-sm text-gray-600 font-medium">(127 تقييم) 4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-end space-x-2 space-x-reverse text-gray-600 mb-4 text-sm">
+                        <span class="flex items-center"><i class="fas fa-calendar-alt ml-1"></i>خبرة 12 سنة</span>
+                        <span class="flex items-center"><i class="fas fa-map-marker-alt ml-1"></i>الرياض</span>
+                    </div>
+
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4 text-center md:text-right">متخصصة في علاج اضطرابات القلق والاكتئاب. حاصلة على شهادة الدكتوراه من جامعة الملك سعود. تستخدم أساليب العلاج المعرفي السلوكي والعلاج النفسي التكاملي.</p>
+                    
+                    <div class="mb-4">
+                        <span class="text-sm font-semibold text-main-heading-color block mb-2 text-center md:text-right">اللغات:</span>
+                        <div class="flex flex-wrap justify-center md:justify-end gap-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">العربية</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">الإنجليزية</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <a href="chat.html" class="chat-btn flex-1 px-4 py-3 rounded-full font-semibold border-2 border-blue-500 text-blue-500 text-center hover:bg-blue-50 transition-colors duration-200">
+                            <i class="fas fa-comment ml-2"></i>محادثة
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2 text-center">متاح للحجز من ١٤٤٧/٧/٨ هـ</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-green-400 relative">
+                    <span class="absolute top-4 left-4 bg-green-400 text-white text-xs font-bold px-3 py-1 rounded-full">متاح</span>
+                    <div class="flex items-center flex-col md:flex-row mb-4">
+                        <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-4xl text-gray-500 mb-4 md:mb-0 md:mr-4">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="text-center md:text-right flex-1">
+                            <h3 class="text-xl font-bold text-main-heading-color" data-therapist-name="د. خالد المطيري">د. خالد المطيري</h3>
+                            <p class="text-blue-500 font-medium">العلاج المعرفي السلوكي</p>
+                            <div class="flex items-center justify-center md:justify-end text-yellow-500 mt-2">
+                                <i class="fas fa-star text-sm ml-1"></i>
+                                <span class="text-sm text-gray-600 font-medium">(203 تقييم) 4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-end space-x-2 space-x-reverse text-gray-600 mb-4 text-sm">
+                        <span class="flex items-center"><i class="fas fa-calendar-alt ml-1"></i>خبرة 8 سنوات</span>
+                        <span class="flex items-center"><i class="fas fa-map-marker-alt ml-1"></i>أون لاين</span>
+                    </div>
+
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4 text-center md:text-right">متخصص في العلاج المعرفي السلوكي لعلاج القلق والوسواس القهري. يقدم جلسات أون لاين وحضورية. معتمد من الجمعية الأمريكية لعلاج المعرفي السلوكي.</p>
+                    
+                    <div class="mb-4">
+                        <span class="text-sm font-semibold text-main-heading-color block mb-2 text-center md:text-right">اللغات:</span>
+                        <div class="flex flex-wrap justify-center md:justify-end gap-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">العربية</span>
+                            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">الإنجليزية</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <a href="chat.html" class="chat-btn flex-1 px-4 py-3 rounded-full font-semibold border-2 border-blue-500 text-blue-500 text-center hover:bg-blue-50 transition-colors duration-200">
+                            <i class="fas fa-comment ml-2"></i>محادثة
+                        </a>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2 text-center">متاح للحجز من ١٤٤٧/٧/٧ هـ</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-gray-300 relative">
+                    <span class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">مشغولة</span>
+                    <div class="flex items-center flex-col md:flex-row mb-4">
+                        <div class="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-4xl text-gray-500 mb-4 md:mb-0 md:mr-4">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="text-center md:text-right flex-1">
+                            <h3 class="text-xl font-bold text-main-heading-color" data-therapist-name="د. فاطمة الزهراني">د. فاطمة الزهراني</h3>
+                            <p class="text-blue-500 font-medium">المعالج الأسري</p>
+                            <div class="flex items-center justify-center md:justify-end text-yellow-500 mt-2">
+                                <i class="fas fa-star text-sm ml-1"></i>
+                                <span class="text-sm text-gray-600 font-medium">(156 تقييم) 4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-end space-x-2 space-x-reverse text-gray-600 mb-4 text-sm">
+                        <span class="flex items-center"><i class="fas fa-calendar-alt ml-1"></i>خبرة 10 سنوات</span>
+                        <span class="flex items-center"><i class="fas fa-map-marker-alt ml-1"></i>الدمام</span>
+                    </div>
+
+                    <p class="text-sm text-gray-700 leading-relaxed mb-4 text-center md:text-right">أخصائية علاج أسري وزوجي، تساعد الأسر في حل النزاعات وتحسين التواصل. حاصلة على ماجستير العلاج الأسري من الجامعة الأمريكية.</p>
+                    
+                    <div class="mb-4">
+                        <span class="text-sm font-semibold text-main-heading-color block mb-2 text-center md:text-right">اللغات:</span>
+                        <div class="flex flex-wrap justify-center md:justify-end gap-2">
+                            <span class="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full">العربية</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button class="flex-1 px-4 py-3 rounded-full font-semibold border-2 border-gray-300 text-gray-400 cursor-not-allowed" disabled>
+                            <i class="fas fa-comment ml-2"></i>محادثة
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2 text-center">متاح للحجز من ١٤٤٧/٧/٨ هـ</p>
+                </div>
+
+            </div>
+
+            <div class="mt-12 p-6 rounded-2xl bg-red-100 border border-red-300 max-w-4xl mx-auto"> 
+                <div class="flex flex-col md:flex-row items-center justify-center text-center"> 
+                    <div class="mb-4 md:mb-0 md:ml-6"> 
+                        <h2 class="text-xl md:text-2xl font-bold text-red-700 mb-2">تحتاج مساعدة عاجلة؟</h2>
+                        <p class="text-sm md:text-base text-red-600">
+                            إذا كنت تواجه أزمة نفسية أو لديك أفكار إيذاء النفس، تواصل معنا فوراً!
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center space-x-reverse space-x-4 text-red-600"> 
+                        <span class="text-sm font-medium">خط المساعدة الطارئ</span>
+                        <a href="tel:920000000" class="text-2xl md:text-3xl font-bold hover:underline bg-red-500 text-white px-4 py-2 rounded-full">920000000</a>
+                        <button class="bg-red-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-600 transition-colors duration-200">دردشة طوارئ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-section py-12" style="background-color: #032145;">
+        <div class="container mx-auto px-4 py-8 md:py-12 text-center">
+            <div class="flex flex-col md:flex-row md:justify-around md:items-start gap-8">
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <div class="flex items-center text-white text-3xl font-bold mb-4">
+                        <i class="fas fa-heart text-base ml-2" style="color: var(--header-heart-icon-color);"></i>
+                        Gazan Therapy
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4 max-w-sm">منصة شاملة للرعاية النفسية والدعم المجتمعي، نؤمن بأهمية الصحة النفسية ونسعى لتوفير بيئة آمنة وداعمة للجميع.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center justify-center"><i class="fas fa-phone-alt ml-2 text-gray-400"></i><span class="text-gray-400">966 50 123 4567+</span></li>
+                        <li class="flex items-center justify-center"><i class="fas fa-envelope ml-2 text-gray-400"></i><span class="text-gray-400">info@sakinat-nafs.com</span></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <h5 class="text-xl font-semibold mb-4 text-white">روابط سريعة</h5>
+                    <ul class="space-y-2">
+                        <li><a href="share_story.html" class="text-gray-400 hover:text-white transition-colors duration-300">شارك قصتك</a></li>
+                        <li><a href="stories.html" class="text-gray-400 hover:text-white transition-colors duration-300">قصص المجتمع</a></li>
+                        <li><a href="consult.html" class="text-gray-400 hover:text-white transition-colors duration-300">استشر معالج</a></li>
+                        <li><a href="daily_tips.html" class="text-gray-400 hover:text-white transition-colors duration-300">نصائح يومية</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <h5 class="text-xl font-semibold mb-4 text-white">الدعم</h5>
+                    <ul class="space-y-2">
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors duration-300">من نحن</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">شروط الاستخدام</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">تواصل معنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6">
+                <p class="text-gray-500 text-sm text-center">&copy; 2025 Gazan Therapy. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.chat-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const therapistName = event.currentTarget.closest('.bg-white').querySelector('[data-therapist-name]').dataset.therapistName;
+                const encodedName = encodeURIComponent(therapistName);
+                event.currentTarget.href = `chat.html?therapist=${encodedName}`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gazan Therapy</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white font-tajawal">
+
+    <header id="mainHeader" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center bg-white shadow-md rounded-full mt-4">
+            <div class="flex items-center space-x-reverse space-x-4">
+                <a href="index.html" class="flex items-center text-2xl font-bold brand-text">
+                    Gazan Therapy
+                    <i class="fas fa-heart text-sm mr-2 brand-icon"></i>
+                </a>
+            </div>
+            <div class="hidden md:flex flex-1 justify-center space-x-reverse space-x-6">
+                <a href="index.html" class="nav-link active">الرئيسية</a>
+                <a href="share_story.html" class="nav-link">شارك قصتك</a>
+                <a href="stories.html" class="nav-link">قصص المجتمع</a>
+                <a href="consult.html" class="nav-link">استشر معالج</a>
+                <a href="daily_tips.html" class="nav-link">نصائح يومية</a>
+                <a href="about_us.html" class="nav-link">من نحن</a>
+            </div>
+            <div class="flex items-center space-x-reverse space-x-4">
+                <a href="login.html" class="login-btn hidden md:block">تسجيل الدخول</a>
+                <button id="mobileMenuToggle" class="text-gray-700 focus:outline-none md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMobileMenu" class="close-btn">&times;</button>
+        <div class="flex flex-col items-center mt-8">
+            <a href="index.html" class="flex items-center text-2xl font-bold brand-text">
+                Gazan Therapy
+                <i class="fas fa-heart text-sm mr-2 brand-icon"></i>
+            </a>
+            <ul class="flex flex-col items-start w-full mt-8">
+                <li><a href="index.html" class="nav-link text-xl active">الرئيسية</a></li>
+                <li><a href="share_story.html" class="nav-link text-xl">شارك قصتك</a></li>
+                <li><a href="stories.html" class="nav-link text-xl">قصص المجتمع</a></li>
+                <li><a href="consult.html" class="nav-link text-xl">استشر معالج</a></li>
+                <li><a href="daily_tips.html" class="nav-link text-xl">نصائح يومية</a></li>
+                <li><a href="about_us.html" class="nav-link text-xl">من نحن</a></li>
+            </ul>
+            <a href="login.html" class="login-btn w-full mt-8 text-center">تسجيل الدخول</a>
+        </div>
+    </div>
+    <div id="mobileMenuOverlay" class="overlay"></div>
+
+    <main class="py-10 pt-20 lg:pt-24">
+        <section class="hero-section container-fluid text-center py-20">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight text-main-heading-color">
+                    اهلا بكم في Gazan Therapy
+                    <br>
+                    <span class="gradient-text">رحلتك نحو السكينة تبدأ من هنا</span>
+                </h1>
+                <p class="text-base md:text-lg mb-8 max-w-3xl mx-auto leading-relaxed text-hero-secondary-text-color">
+                    منصة شاملة للرعاية النفسية والدعم المجتمعي. شارك قصتك، استشر المختصين، واحصل على الدعم الذي تحتاجه في رحلتك نحو الشفاء والسكينة النفسية.
+                </p>
+                <div class="flex justify-center space-x-reverse space-x-4">
+                    <a href="consult.html" class="hero-btn-primary py-3 px-8 text-lg rounded-full">
+                        ابدأ رحلتك الآن
+                    </a>
+                    <a href="share_story.html" class="hero-btn-outline py-3 px-8 text-lg rounded-full flex items-center justify-between">
+                        <span>شارك قصتك</span>
+                        <i class="fas fa-arrow-left mr-3"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us-section py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-extrabold mb-4">لماذا Gazan Therapy؟</h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+                    نؤمن بأن الصحة النفسية حق أساسي للجميع، لذلك أنشأنا هذه المنصة لتكون مساحة آمنة وداعمة حيث يمكن للأشخاص<br>
+                    مشاركة تجاربهم، الحصول على المساعدة المهنية، والتواصل مع مجتمع يفهم ويدعم.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    <div class="col mb-4">
+                        <div class="card p-6 h-full flex flex-col items-center justify-center">
+                            <div class="icon-circle bg-blue-100 mx-auto mb-4"><i class="fas fa-lightbulb text-blue-500"></i></div>
+                            <h4 class="text-xl font-bold mb-2">نصائح يومية</h4>
+                            <p class="text-gray-600 text-center">استفد من النصائح والأدوات اليومية لتحسين صحتك النفسية</p>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card p-6 h-full flex flex-col items-center justify-center">
+                            <div class="icon-circle bg-green-100 mx-auto mb-4"><i class="fas fa-check-circle text-green-500"></i></div>
+                            <h4 class="text-xl font-bold mb-2">مساعدة مهنية</h4>
+                            <p class="text-gray-600 text-center">احصل على الاستشارة من معالجين مختصين ومعتمدين</p>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card p-6 h-full flex flex-col items-center justify-center">
+                            <div class="icon-circle bg-blue-100 mx-auto mb-4"><i class="fas fa-users text-blue-500"></i></div>
+                            <h4 class="text-xl font-bold mb-2">مجتمع داعم</h4>
+                            <p class="text-gray-600 text-center">تواصل مع أشخاص يفهمون تجربتك ويقدمون الدعم الحقيقي</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section py-16 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-extrabold mb-2">خدماتنا</h2>
+                <p class="text-lg text-gray-600 mb-12">اكتشف الطرق المختلفة التي يمكننا مساعدتك بها</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+                    <a href="daily_tips.html" class="col mb-4">
+                        <div class="card p-6 h-full flex flex-col items-center justify-center">
+                            <div class="icon-circle bg-orange-100 mx-auto mb-4"><i class="fas fa-lightbulb text-orange-500"></i></div>
+                            <h5 class="text-lg font-bold mb-2">نصائح يومية</h5>
+                            <p class="text-gray-600 text-center">احصل على نصائح يومية لتحسين صحتك النفسية</p>
+                        </div>
+                    </a>
+                    <a href="stories.html" class="col mb-4">
+                        <div class="card p-6 h-full flex flex-col items-center justify-center">
+                            <div class="icon-circle bg-purple-100 mx-auto mb-4"><i class="fas fa-comments text-purple-500"></i></div>
+                            <h5 class="text-lg font-bold mb-2">قصص المجتمع</h5>
+                            <p class="text-gray-600 text-center">اقرأ تجارب الآخرين وتفاعل مع المجتمع</p>
+                        </div>
+                    </a>
+                    <a href="consult.html" class="col mb-4">
+                        <div class="card p-6 h-full flex flex-col items-center justify-center">
+                            <div class="icon-circle bg-green-100 mx-auto mb-4"><i class="fas fa-user-friends text-green-500"></i></div>
+                            <h5 class="text-lg font-bold mb-2">استشر معالج</h5>
+                            <p class="text-gray-600 text-center">احصل على المساعدة المهنية من معالجين مختصين</p>
+                        </div>
+                    </a>
+                    <a href="share_story.html" class="col mb-4">
+                        <div class="card p-6 h-full flex flex-col items-center justify-center">
+                            <div class="icon-circle bg-blue-100 mx-auto mb-4"><i class="fas fa-upload text-blue-500"></i></div>
+                            <h5 class="text-lg font-bold mb-2">شارك قصتك</h5>
+                            <p class="text-gray-600 text-center">شارك تجربتك وساعد الآخرين من خلال قصتك الملهمة</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-extrabold mb-2">ماذا يقول مستخدمونا</h2>
+                <p class="text-lg text-gray-600 mb-12">تجارب حقيقية من أشخاص استفادوا من منصتنا</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    <div class="col mb-4">
+                        <div class="testimonial-card p-6 h-full flex flex-col justify-between">
+                            <div class="rating mb-4 text-2xl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="text-gray-600 text-center mb-4 leading-relaxed">"النصائح اليومية والقصص الملهمة عبرت طريقي للحياة. أنصح الجميع بالاستفادة من هذه المنصة."</p>
+                            <h6 class="mt-auto text-xl font-bold text-gray-800">- فاطمة خالد</h6>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="testimonial-card p-6 h-full flex flex-col justify-between">
+                            <div class="rating mb-4 text-2xl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="text-gray-600 text-center mb-4 leading-relaxed">"المعالجون المختصون في المنصة محترفون جداً ويساعدون في فهم مشاكلي بطريقة أفضل."</p>
+                            <h6 class="mt-auto text-xl font-bold text-gray-800">- محمد علي</h6>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="testimonial-card p-6 h-full flex flex-col justify-between">
+                            <div class="rating mb-4 text-2xl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="text-gray-600 text-center mb-4 leading-relaxed">"ساعدتني المنصة في تجاوز أصعب فترات حياتي. الدعم المجتمعي والنصائح المهنية كانت لا تقدر بثمن."</p>
+                            <h6 class="mt-auto text-xl font-bold text-gray-800">- سارة أحمد</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section my-8" style="background-color: var(--body-bg-color);">
+            <div class="container mx-auto text-center px-4 md:px-8">
+                <div class="w-full max-w-4xl mx-auto bg-gradient-to-r from-blue-500 to-green-400 rounded-xl p-10 shadow-lg">
+                    <h2 class="text-4xl font-extrabold text-white mb-4">ابدأ رحلتك نحو السكينة اليوم</h2>
+                    <p class="text-lg text-white text-opacity-75 mb-8">
+                        انضم إلى مجتمعنا الداعم واحصل على المساعدة التي تحتاجها
+                    </p>
+                    <a href="login.html" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition inline-block">
+                        انضم إلينا الآن
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section py-12" style="background-color: #032145;">
+        <div class="container mx-auto px-4 py-8 md:py-12 text-center">
+            <div class="flex flex-col md:flex-row md:justify-around md:items-start gap-8">
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <div class="flex items-center text-white text-3xl font-bold mb-4">
+                        <i class="fas fa-heart text-base ml-2" style="color: var(--header-heart-icon-color);"></i>
+                        سكينة النفس
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4 max-w-sm">منصة شاملة للرعاية النفسية والدعم المجتمعي، نؤمن بأهمية الصحة النفسية ونسعى لتوفير بيئة آمنة وداعمة للجميع.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center justify-center"><i class="fas fa-phone-alt ml-2 text-gray-400"></i><span class="text-gray-400">966 50 123 4567+</span></li>
+                        <li class="flex items-center justify-center"><i class="fas fa-envelope ml-2 text-gray-400"></i><span class="text-gray-400">info@sakinat-nafs.com</span></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <h5 class="text-xl font-semibold mb-4 text-white">روابط سريعة</h5>
+                    <ul class="space-y-2">
+                        <li><a href="share_story.html" class="text-gray-400 hover:text-white transition-colors duration-300">شارك قصتك</a></li>
+                        <li><a href="stories.html" class="text-gray-400 hover:text-white transition-colors duration-300">قصص المجتمع</a></li>
+                        <li><a href="consult.html" class="text-gray-400 hover:text-white transition-colors duration-300">استشر معالج</a></li>
+                        <li><a href="daily_tips.html" class="text-gray-400 hover:text-white transition-colors duration-300">نصائح يومية</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <h5 class="text-xl font-semibold mb-4 text-white">الدعم</h5>
+                    <ul class="space-y-2">
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors duration-300">من نحن</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">شروط الاستخدام</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">تواصل معنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6">
+                <p class="text-gray-500 text-sm text-center">&copy; 2025 Gazan Therapy. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

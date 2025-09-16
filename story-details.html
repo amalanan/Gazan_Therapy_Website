@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل القصة | Gazan Therapy</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-body-bg-color font-tajawal">
+
+    <header id="mainHeader" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center bg-white shadow-md rounded-full mt-4">
+            <div class="flex items-center space-x-reverse space-x-4">
+                <a href="index.html" class="flex items-center text-2xl font-bold brand-text">
+                    Gazan Therapy
+                    <i class="fas fa-heart text-sm mr-2 brand-icon"></i>
+                </a>
+            </div>
+            <div class="hidden md:flex flex-1 justify-center space-x-reverse space-x-6">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="share_story.html" class="nav-link">شارك قصتك</a>
+                <a href="stories.html" class="nav-link active">قصص المجتمع</a>
+                <a href="consult.html" class="nav-link">استشر معالج</a>
+                <a href="daily_tips.html" class="nav-link">نصائح يومية</a>
+                <a href="about_us.html" class="nav-link">من نحن</a>
+            </div>
+            <div class="flex items-center space-x-reverse space-x-4">
+                <a href="login.html" class="login-btn hidden md:block">تسجيل الدخول</a>
+                <button id="mobileMenuToggle" class="text-gray-700 focus:outline-none md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMobileMenu" class="close-btn">&times;</button>
+        <div class="flex flex-col items-center mt-8">
+            <a href="index.html" class="flex items-center text-2xl font-bold brand-text">
+                Gazan Therapy
+                <i class="fas fa-heart text-sm mr-2 brand-icon"></i>
+            </a>
+            <ul class="flex flex-col items-start w-full mt-8">
+                <li><a href="index.html" class="nav-link text-xl">الرئيسية</a></li>
+                <li><a href="share_story.html" class="nav-link text-xl">شارك قصتك</a></li>
+                <li><a href="stories.html" class="nav-link text-xl active">قصص المجتمع</a></li>
+                <li><a href="consult.html" class="nav-link text-xl">استشر معالج</a></li>
+                <li><a href="daily_tips.html" class="nav-link text-xl">نصائح يومية</a></li>
+                <li><a href="about_us.html" class="nav-link text-xl">من نحن</a></li>
+            </ul>
+            <a href="login.html" class="login-btn w-full mt-8 text-center">تسجيل الدخول</a>
+        </div>
+    </div>
+    <div id="mobileMenuOverlay" class="overlay"></div>
+
+    <main class="py-10 pt-32 lg:pt-40 px-4">
+        <div class="container mx-auto max-w-3xl">
+            <div class="mb-6">
+                <a href="stories.html" class="inline-flex items-center px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors duration-200">
+                    <i class="fas fa-arrow-right ml-2"></i>
+                    العودة إلى القصص
+                </a>
+            </div>
+            <div id="story-container" class="bg-white p-8 rounded-xl shadow-lg"></div>
+        </div>
+    </main>
+
+    <footer class="footer-section py-12" style="background-color: #032145;">
+        <div class="container mx-auto px-4 py-8 md:py-12 text-center">
+            <div class="flex flex-col md:flex-row md:justify-around md:items-start gap-8">
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <div class="flex items-center text-white text-3xl font-bold mb-4">
+                        <i class="fas fa-heart text-base ml-2" style="color: var(--header-heart-icon-color);"></i>
+                        Gazan Therapy
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4 max-w-sm">منصة شاملة للرعاية النفسية والدعم المجتمعي، نؤمن بأهمية الصحة النفسية ونسعى لتوفير بيئة آمنة وداعمة للجميع.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center justify-center"><i class="fas fa-phone-alt ml-2 text-gray-400"></i><span class="text-gray-400">966 50 123 4567+</span></li>
+                        <li class="flex items-center justify-center"><i class="fas fa-envelope ml-2 text-gray-400"></i><span class="text-gray-400">info@sakinat-nafs.com</span></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <h5 class="text-xl font-semibold mb-4 text-white">روابط سريعة</h5>
+                    <ul class="space-y-2">
+                        <li><a href="share_story.html" class="text-gray-400 hover:text-white transition-colors duration-300">شارك قصتك</a></li>
+                        <li><a href="stories.html" class="text-gray-400 hover:text-white transition-colors duration-300">قصص المجتمع</a></li>
+                        <li><a href="consult.html" class="text-gray-400 hover:text-white transition-colors duration-300">استشر معالج</a></li>
+                        <li><a href="daily_tips.html" class="text-gray-400 hover:text-white transition-colors duration-300">نصائح يومية</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center mb-6 md:mb-0">
+                    <h5 class="text-xl font-semibold mb-4 text-white">الدعم</h5>
+                    <ul class="space-y-2">
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors duration-300">من نحن</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">شروط الاستخدام</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-300">تواصل معنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6">
+                <p class="text-gray-500 text-sm text-center">&copy; 2025 Gazan Therapy. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const stories = {
+            1: {"title": "رحلتي في التغلب على القلق الاجتماعي", "author": "سارة م.", "date": "30 يناير 2025", "likes": 24, "content": `كنت أعاني من القلق الاجتماعي لسنوات طويلة، حتى أصبح من الصعب علي التفاعل مع الآخرين أو حتى المشاركة في الأنشطة العائلية.
+            بدأت رحلتي مع العلاج النفسي بخطوات صغيرة، من خلال جلسات علاج معرفي سلوكي وممارسة تمارين الاسترخاء.
+            تعلمت أن مواجهة الخوف أفضل من الهروب منه، واليوم أشعر بثقة أكبر في التعامل مع المواقف الاجتماعية.`},
+            2: {"title": "من الاكتئاب إلى الأمل", "author": "أحمد يوسف", "date": "10 نيسان 2025", "likes": 12, "content": `بعد فقدان وظيفتي، شعرت بالضياع واليأس. كان الأمر صعبًا للغاية خاصة مع الضغوط المالية والمسؤوليات.
+            قررت طلب الدعم من مختص نفسي والانضمام لمجموعة دعم، وتعلمت كيف أضع أهداف صغيرة وأحتفل بالإنجازات.
+            تدريجيًا، عاد الأمل إلى حياتي وأصبحت أرى مستقبلاً مشرقًا رغم الصعوبات.`},
+            3: {"title": "الصداقة أنقذتني", "author": "ليلى خليل", "date": "8 أغسطس 2025", "likes": 8, "content": `كنت أعيش ضغوطًا نفسية بصمت، حتى وجدت صديقتي المقربة التي استمعت لي بكل حب وصبر.
+            كلماتها ودعمها المستمر كانا بمثابة طوق نجاة أنقذني من الغرق في الاكتئاب.
+            اليوم، أحرص على أن أكون داعمًا للآخرين كما كانت هي لي، وأدركت قيمة العلاقات الإنسانية الصادقة.`},
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        if (stories[id]) {
+            const s = stories[id];
+            document.getElementById("story-container").innerHTML = `
+                <h1 class="text-3xl font-bold mb-4 text-main-heading-color">${s.title}</h1>
+                <div class="text-gray-500 font-medium mb-4">
+                    <span class="text-main-text-color">${s.author}</span> | <span class="text-gray-500">${s.date}</span>
+                </div>
+                <p class="text-lg text-light-text-color leading-relaxed mb-6">${s.content.replace(/\n/g, '<br><br>')}</p>
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <button class="like-btn flex items-center text-gray-500 hover:text-red-500 transition-colors">
+                        <i class="fas fa-heart ml-1"></i>
+                        <span>${s.likes}</span>
+                    </button>
+                    <a href="#" class="flex items-center text-gray-500 hover:text-blue-500 transition-colors">
+                        <i class="fas fa-comment ml-1"></i>
+                        تعليق
+                    </a>
+                </div>
+            `;
+            document.querySelector('.like-btn').addEventListener('click', function() {
+                const span = this.querySelector('span');
+                let count = parseInt(span.textContent);
+                this.classList.toggle('liked');
+                span.textContent = this.classList.contains('liked') ? count + 1 : count - 1;
+            });
+        } else {
+            document.getElementById("story-container").innerHTML = "<p class='text-center text-gray-500'>القصة غير موجودة.</p>";
+        }
+    </script>
+</body>
+</html>
